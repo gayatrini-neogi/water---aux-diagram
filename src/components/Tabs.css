@@ -1,0 +1,175 @@
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure the container takes the full viewport height */
+}
+
+.tab-content {
+  flex: 1; /* Make this section take up the available space */
+  overflow-y: auto; /* Allow scrolling if content is too large */
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.add-image-button, .table-button {
+  padding: 10px;
+  margin-right: 10px;
+  background-color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #e0e8f0; /* Match the color from the image */
+  border-top: 1px solid #ccc;
+  position: sticky; /* Keep the bottom section fixed at the bottom */
+  bottom: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.tab {
+  padding: 8px 16px;
+  margin-right: 5px;
+  background-color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: pink;
+  font-weight: bold;
+}
+
+.bottom-tabs {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.bottom-tab {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background-color: white; /* Default background */
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bottom-tab.active {
+  background-color: pink; /* Pink background for the active tab */
+  color: white;
+}
+
+.zoom-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.zoom-in, .zoom-out {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.zoom-input {
+  width: 50px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.print-options-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.print-options-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.print-options-container h3,
+.print-options-container h4 {
+  margin: 10px 0;
+}
+
+.print-options-container label {
+  display: block; /* Display labels as block for better layout */
+  margin: 5px 0;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  margin-right: 10px;
+}
+
+/* Styling for the date picker positioned on the right */
+.date-picker-container {
+  margin-left: 1350px; /* Aligns date picker to the far right */
+  padding: 0 10px;
+}
+
+.resizable-rectangle {
+  position: absolute;
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
+.resize-node {
+  width: 8px;
+  height: 8px;
+  background: blue;
+  position: absolute;
+}
+
+.top-left { top: -4px; left: -4px; cursor: nw-resize; }
+.top { top: -4px; left: 50%; transform: translateX(-50%); cursor: n-resize; }
+.top-right { top: -4px; right: -4px; cursor: ne-resize; }
+.right { top: 50%; right: -4px; transform: translateY(-50%); cursor: e-resize; }
+.bottom-right { bottom: -4px; right: -4px; cursor: se-resize; }
+.bottom { bottom: -4px; left: 50%; transform: translateX(-50%); cursor: s-resize; }
+.bottom-left { bottom: -4px; left: -4px; cursor: sw-resize; }
+.left { top: 50%; left: -4px; transform: translateY(-50%); cursor: w-resize; }
+.center { top: 50%; left: 50%; transform: translate(-50%, -50%); cursor: move; }

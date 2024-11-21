@@ -1,0 +1,64 @@
+/* SidebarTools.css */
+
+.sidebar-tools-container {
+  position: fixed; /* Sticks to the top of the page */
+  top: 0;
+  left: 0;
+  width: 100%; /* Spans the entire width */
+  height: 60px; /* Adjust the height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f0f0; /* Background color for visibility */
+  padding: 0 10px;
+  z-index: 1000; /* High z-index to make sure it's on top */
+  border-bottom: 1px solid #ccc; /* Bottom border for separation */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for clarity */
+}
+
+.sidebar-tools {
+  display: flex;
+  gap: 10px;
+}
+
+.tool-box {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white; /* White background for clarity */
+  cursor: pointer;
+}
+
+.tool-box.active {
+  background-color: lightblue; /* Highlight when active */
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-group button {
+  padding: 5px 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  background-color: darkblue;
+}
+
+.date-picker {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
